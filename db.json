@@ -9,12 +9,25 @@
     {
       "id": 1,
       "durancaoEmSegundos": "120",
-      "descricao": "Config do ambiente",
+      "descricao": "Configuração do Ambiente",
       "projetos": {
         "id": 1,
-        "nome":"Alura tracker"
-      } 
-
+        "nome": "Alura tracker"
+      }
+    },
+    {
+      "duracaoEmSegundos": 3,
+      "descricao": "refatoração",
+      "id": 2
+    },
+    {
+      "duracaoEmSegundos": 5,
+      "descricao": "",
+      "projeto": {
+        "nome": "Alura tracker",
+        "id": 1
+      },
+      "id": 3
     }
   ]
 }
