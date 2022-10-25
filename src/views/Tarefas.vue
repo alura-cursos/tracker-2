@@ -98,7 +98,7 @@ export default defineComponent({
   },
   computed: {
     semTarefas(): boolean {
-      return this.tarefas.length == 0;
+      return this.tarefas?.length == 0;
     },
   },
   setup() {
