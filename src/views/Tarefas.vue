@@ -58,14 +58,13 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
+import { computed, defineComponent, ref, watchEffect } from "vue";
 import Formulario from "../components/Formulario.vue";
 import Tarefa from "../components/Tarefa.vue";
 import Box from "../components/Box.vue";
 import { useStore } from "@/store";
-import { OBTER_PROJETOS, OBTER_TAREFAS } from "@/store/tipo-acoes";
+import { OBTER_PROJETOS, OBTER_TAREFAS, ALTERA_TAREFA, ADICIONA_TAREFA } from "@/store/tipo-acoes";
 import ITarefa from "@/interfaces/ITarefa";
-import { ADICIONA_TAREFA, ALTERAR_TAREFA } from "@/store/tipo-mutacoes";
 
 export default defineComponent({
   name: "App",
@@ -93,7 +92,7 @@ export default defineComponent({
     },
     alterarTarefa() {
       this.store
-        .dispatch(ALTERAR_TAREFA, this.tarefaSelecionada)
+        .dispatch(ALTERA_TAREFA, this.tarefaSelecionada)
         .then(() => this.fecharModal());
     },
   },
@@ -105,14 +104,17 @@ export default defineComponent({
   setup() {
     const store = useStore();
     const filtro = ref("") 
-    const tarefas = computed(() => store.state.tarefas)
 
     store.dispatch(OBTER_TAREFAS);
     store.dispatch(OBTER_PROJETOS);
-  
+    // const tarefas = computed(() => store.state.tarefa.tarefas.filter((t) => !filtro.value || t.descricao.includes(filtro.value)))  
+
+    watchEffect(() => {
+      store.dispatch(OBTER_TAREFAS, filtro.value)
+    })
 
     return {
-      tarefas,
+      tarefas: computed(() => store.state.tarefa.tarefas),
       store,
       filtro
     };

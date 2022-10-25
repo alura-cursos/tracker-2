@@ -1,10 +1,6 @@
 {
   "projetos": [
     {
-      "id": 1,
-      "nome": "Alura tracker"
-    },
-    {
       "nome": "Alura tracker",
       "id": 2
     }
@@ -13,7 +9,7 @@
     {
       "id": 1,
       "durancaoEmSegundos": "120",
-      "descricao": "Configuração do Ambiente",
+      "descricao": "Configuração do Ambientes Escaláveis",
       "projetos": {
         "id": 1,
         "nome": "Alura tracker"
@@ -26,21 +22,12 @@
     },
     {
       "duracaoEmSegundos": 5,
-      "descricao": "",
+      "descricao": "TESTE",
       "projeto": {
         "nome": "Alura tracker",
         "id": 1
       },
       "id": 3
-    },
-    {
-      "duracaoEmSegundos": 4,
-      "descricao": "",
-      "projeto": {
-        "nome": "Alura tracker",
-        "id": 1
-      },
-      "id": 4
     }
   ]
 }
