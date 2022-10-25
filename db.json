@@ -9,7 +9,7 @@
     {
       "id": 1,
       "durancaoEmSegundos": "120",
-      "descricao": "Configuração do Ambientes Escaláveis",
+      "descricao": "Configuração do Ambientes",
       "projetos": {
         "id": 1,
         "nome": "Alura tracker"
