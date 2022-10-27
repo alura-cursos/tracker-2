@@ -22,7 +22,7 @@
     },
     {
       "duracaoEmSegundos": 5,
-      "descricao": "TESTE",
+      "descricao": "Teste",
       "projeto": {
         "nome": "Alura tracker",
         "id": 1
