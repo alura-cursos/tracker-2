@@ -1,0 +1,33 @@
+{
+  "projetos": [
+    {
+      "nome": "Alura tracker",
+      "id": 2
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "durancaoEmSegundos": "120",
+      "descricao": "Configuração do Ambientes",
+      "projetos": {
+        "id": 1,
+        "nome": "Alura tracker"
+      }
+    },
+    {
+      "duracaoEmSegundos": 3,
+      "descricao": "refatoração",
+      "id": 2
+    },
+    {
+      "duracaoEmSegundos": 5,
+      "descricao": "Teste",
+      "projeto": {
+        "nome": "Alura tracker",
+        "id": 1
+      },
+      "id": 3
+    }
+  ]
+}
